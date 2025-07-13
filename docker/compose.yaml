@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: 'mysql:8.4.5'
+    container_name: mysql-8.4.5
+    environment:
+      - 'MYSQL_DATABASE=spring_security'
+      - 'MYSQL_PASSWORD=my_password'
+      - 'MYSQL_ROOT_PASSWORD=my_root_password'
+      - 'MYSQL_USER=my_user'
+    ports:
+      - '3306:3306'
+    volumes:
+      - my_db_data:/var/lib/mysql
+volumes:
+  my_db_data:
+    name: spring_security_basic_auth_vol
