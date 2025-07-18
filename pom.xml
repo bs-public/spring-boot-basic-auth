@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com</groupId>
-    <artifactId>spring-security-basic-auth-v6</artifactId>
+    <artifactId>spring-boot-basic-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-security-basic-auth-v6</name>
+    <name>spring-boot-basic-auth</name>
     <description>Demo project for Spring Security basic authentication</description>
 
     <properties>
