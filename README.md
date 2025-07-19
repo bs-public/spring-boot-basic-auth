@@ -21,9 +21,9 @@ From the project root, following instructions can be performed:
 
 ## Endpoints 
 
-### 1. Public api Check
+### 1. Health Check
 ```bash
-    curl -v http://localhost:8080/api/public/health
+    curl http://localhost:8080/actuator/health
 ```
 
 ### 2. Register a New User
