@@ -16,6 +16,7 @@ public class SecurityConfig {
 
   private final CustomUserDetailsService userDetailsService;
   private final PasswordEncoder passwordEncoder;
+  private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
 
   @Bean
   public DaoAuthenticationProvider authenticationProvider() {
@@ -34,7 +35,10 @@ public class SecurityConfig {
                     .requestMatchers("/api/users/**").authenticated()
                     .anyRequest().authenticated()
             )
-            .httpBasic(basic -> basic.realmName("Spring Security Demo"))
+            .httpBasic(basic -> basic
+                    .realmName("Spring Boot Basic Auth")
+                    .authenticationEntryPoint(customAuthenticationEntryPoint)
+            )
             .formLogin(form -> form.disable());
 
     return http.build();
